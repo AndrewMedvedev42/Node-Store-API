@@ -12,10 +12,6 @@ const errorMiddleware = require('./middleware/error-handler')
 
 app.use(express.json())
 
-app.get('/',(req, res)=>{
-    res.send('<h1>Hello World</h1>')
-})
-
 app.use('/api/v1/products', productsRouter)
 
 app.use(notFoundMiddleware)
